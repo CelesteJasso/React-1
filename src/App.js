@@ -1,7 +1,7 @@
 import React from "react";
-import pokemon from "./pokemon.json";
+import pokemon from "pokemon.json";
 
-import "./App.css";
+import "App.css";
 
 function App() {
   return (
