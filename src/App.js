@@ -36,6 +36,7 @@ function App() {
       }}
     >
       <h1 className="title">Pokemon Search</h1>
+      <input value={filter} onChange={(evt) => filterSet(evt.target.value)} />
       <div
         style={{
           display: "grid",
@@ -44,10 +45,6 @@ function App() {
         }}
       >
         <div>
-          <input
-            value={filter}
-            onChange={(evt) => filterSet(evt.target.value)}
-          />
           <table width="100%">
             <thead>
               <tr>
