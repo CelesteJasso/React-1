@@ -4,15 +4,17 @@ import PropTypes from "prop-types";
 import "./App.css";
 import pokemon from "./pokemon.json";
 
-const PokemonRow = ({ pokemon, onSelect }) => (
-  <tr>
-    <td>{pokemon.name.english}</td>
-    <td>{pokemon.type.join(", ")}</td>
-    <td>
-      <button onClick={() => onSelect(pokemon)}>Select!</button>
-    </td>
-  </tr>
-);
+function PokemonRow({ pokemon, onSelect }) {
+  return (
+    <tr>
+      <td>{pokemon.name.english}</td>
+      <td>{pokemon.type.join(", ")}</td>
+      <td>
+        <button onClick={() => onSelect(pokemon)}>Select!</button>
+      </td>
+    </tr>
+  );
+}
 
 PokemonRow.PropTypes = {
   pokemon: PropTypes.shape({
@@ -27,6 +29,7 @@ PokemonRow.PropTypes = {
 function App() {
   const [filter, filterSet] = React.useState("");
   const [selectedItem, selectedItemSet] = React.useState(null);
+
   return (
     <div
       style={{
