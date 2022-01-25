@@ -76,6 +76,7 @@ function App() {
         {selectedItem && (
           <div>
             <h1>{selectedItem.name.english}</h1>
+            <img src={"./img/" + selectedItem.name.english + ".jpg"} />
           </div>
         )}
       </div>
