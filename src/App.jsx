@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./App.css";
 import pokemon from "./pokemon.json";
+import Counter from "./components/Counter";
 
 function PokemonRow({ pokemon, onSelect }) {
   return (
@@ -38,6 +39,7 @@ function App() {
         paddingTop: "1em",
       }}
     >
+      <Counter />
       <h1 className="title">Pokemon Search</h1>
       <input value={filter} onChange={(evt) => filterSet(evt.target.value)} />
       <div
